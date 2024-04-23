@@ -22,7 +22,7 @@ import testImg3 from "../../../src/assets/banjo.png"
 function GameCarousel(props) {
 
     return (
-        <div className={styles.carousel_container}>
+        <div className={"container "+styles.carousel_container}>
             <Swiper
                 // Specify the modules to use
                 modules={[Autoplay, Pagination, Navigation]}
