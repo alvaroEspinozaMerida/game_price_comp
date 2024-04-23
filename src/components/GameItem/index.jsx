@@ -8,7 +8,7 @@ function GameItem(props) {
         <div className={styles.item_container}>
 
 
-            <h2>{props.item.title}</h2>
+            <h2 class="title is-5">{props.item.title}</h2>
             <Link to = {`/game_item/${props.item.steamAppID}`}>
             <img src={testImg2} alt="Image 2" />
             </Link>
