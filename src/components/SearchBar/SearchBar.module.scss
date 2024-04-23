@@ -1,16 +1,64 @@
 @import "../../styles/variables.scss";
-.searchbar{
+$large-font: 16px;
+$bg3: #ccc;
+$button-bg: #121212;
 
-  //display: flex;
-  //justify-content: center;
-  //align-items: center;
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
   width: 65vw;
+  background: none;
+}
+
+.searchInput {
+  flex-grow: 1;
   font-size: $large-font;
   border: 2px solid $bg3;
   border-radius: .5rem;
-  //font-size: inherit;
   color: white;
   outline: none;
   padding: 1.25rem;
-  background: none;
+  background-color: $button-bg;
+}
+
+.searchButton {
+  padding: 1.25rem;
+  background-color: $button-bg;
+  color: white;
+  border: 2px solid $bg3;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+.suggestions {
+  background-color: #121212;
+  //border: 2px solid $bg3;
+  border-radius: .5rem;
+}
+
+.suggestions li {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #40444b;
+    border-radius: .5rem;
+  }
+}
+
+.suggestionLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }

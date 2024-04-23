@@ -37,7 +37,7 @@ function SearchBar({ onSearch }) {
 
 
     const handleSubmit = (event) => {
-        event.preventDefault();  // Prevent default form submission behavior
+        event.preventDefault();
 
         navigate('/results',{ state: { query: query } })
     };
@@ -46,30 +46,33 @@ function SearchBar({ onSearch }) {
 
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-
-            <input type="text" value={query} onChange={e => onChangeHandler(e.target.value)} />
-            {suggestions.length > 0 && (
-                <ul>
-                    {suggestions.map((item, index) => (
-                        <li key={index} onClick={() => setQuery(item.title)}>
-                            <Link to = {`/game_item/${item.steamAppID}`}>
-                                {item.title}
-                            </Link>
-
-                        </li>
-                    ))}
-                </ul>
-            )}
-                <button type="submit">Search</button>
-
+        <div className={styles.container}>
+            <form onSubmit={handleSubmit} className={styles.searchForm}>
+                <div className={styles.searchBox}>
+                    <input
+                        className={styles.searchInput}
+                        type="text"
+                        placeholder="Search..."
+                        value={query}
+                        onChange={e => onChangeHandler(e.target.value)}
+                    />
+                    <button type="submit" className={styles.searchButton}>Search</button>
+                </div>
+                {suggestions.length > 0 && (
+                    <ul className={styles.suggestions}>
+                        {suggestions.map((item, index) => (
+                            <li key={index} onClick={() => setQuery(item.title)}>
+                                <Link to={`/game_item/${item.steamAppID}`} className={styles.suggestionLink}>
+                                    {item.title}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                )}
             </form>
-
         </div>
-
-
     );
+
 }
 
 export default SearchBar;
