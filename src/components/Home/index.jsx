@@ -27,7 +27,6 @@ const Home = () => {
 
                 <div className={styles.main_container__top_gallery}>
                     <h1>TOP SELLERS</h1>
-                    {/*First couple of the items taken from the gamesTestData state variable*/}
                     <div className={styles.main_container__top_gallery__items}>
 
                         {
