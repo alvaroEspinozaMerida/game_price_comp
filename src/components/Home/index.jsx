@@ -8,9 +8,6 @@ import SearchBar from "../SearchBar/index.jsx";
 import GameCarousel from "../GameCarousel/index.jsx";
 import GameItem from "../GameItem/index.jsx";
 
-import { Link } from 'react-router-dom';
-
-
 
 const Home = () => {
     const [content, setContent] = useState([]);
