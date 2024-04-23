@@ -3,7 +3,7 @@ import styles from "./SearchBar.module.scss"
 
 import cached_data from "../../assets/testData3.json"
 
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import testImg2 from "../../assets/half.png";
 
 
@@ -14,6 +14,9 @@ function SearchBar({ onSearch }) {
     const [data, setData] = useState([]);
     const [query, setQuery] = useState('');
     const [suggestions, setSuggestions] = useState([]);
+
+    const navigate = useNavigate();
+
 
 
     useEffect(() => {
@@ -33,8 +36,19 @@ function SearchBar({ onSearch }) {
     };
 
 
+    const handleSubmit = (event) => {
+        event.preventDefault();  // Prevent default form submission behavior
+
+        navigate('/results',{ state: { query: query } })
+    };
+
+
+
+
     return (
         <div>
+            <form onSubmit={handleSubmit}>
+
             <input type="text" value={query} onChange={e => onChangeHandler(e.target.value)} />
             {suggestions.length > 0 && (
                 <ul>
@@ -48,6 +62,10 @@ function SearchBar({ onSearch }) {
                     ))}
                 </ul>
             )}
+                <button type="submit">Search</button>
+
+            </form>
+
         </div>
 
 
