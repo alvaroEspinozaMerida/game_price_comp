@@ -25,8 +25,8 @@ const Home = () => {
                     <GameCarousel/>
                 </div>
 
-                <div className={styles.main_container__top_gallery}>
-                    <h1>TOP SELLERS</h1>
+                <div className={"container "+styles.main_container__top_gallery}>
+                    <h1 className="title is-1">TOP SELLERS</h1>
                     <div className={styles.main_container__top_gallery__items}>
 
                         {
@@ -35,6 +35,7 @@ const Home = () => {
 
                     </div>
                 </div >
+
 
             </div>
         </>
