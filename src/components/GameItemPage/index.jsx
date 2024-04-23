@@ -62,13 +62,6 @@ function GameItemPage(props) {
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;
 
-
-
-
-
-
-
-
     if (!item) {
         // Data has not loaded yet, return loading state or null
         return <div>Loading...</div>;
