@@ -19,7 +19,6 @@ function GameItemPage(props) {
     const params = useParams();
     console.log(params['steamAppID'])
 
-
     // find the specific game inside of the json data using the GAMEID variable
     // LEAVE THIS FOR LATE
     // const [content, setContent] = useState(null);
