@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import styles from "./HomeGameItem.module.scss"
+import styles from "./GameItem.module.scss"
 import testImg2 from "../../assets/half.png";
-function HomeGameItem(props) {
+function GameItem(props) {
     return (
         <div className={styles.item_container}>
 
@@ -24,4 +24,4 @@ function HomeGameItem(props) {
     );
 }
 
-export default HomeGameItem;
+export default GameItem;

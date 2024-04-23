@@ -2,7 +2,7 @@ import styles from "./Home.module.scss"
 import {useEffect, useState} from "react";
 // import testData from "../../../src/assets/content/test_data.json";
 
-import gameTestData from "../../assets/testData3.json"
+import cached_data from "../../assets/testData3.json"
 
 import SearchBar from "../SearchBar/index.jsx";
 import GameCarousel from "../GameCarousel/index.jsx";
@@ -13,7 +13,7 @@ const Home = () => {
     const [content, setContent] = useState([]);
 
     useEffect(() => {
-        setContent(gameTestData.games)
+        setContent(cached_data.games)
     }, []);
 
 
