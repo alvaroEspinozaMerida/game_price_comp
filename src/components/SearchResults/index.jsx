@@ -4,43 +4,51 @@ import SearchBar from '../SearchBar';
 import GameItem from '../GameItem';
 import styles from "../SearchResults/SearchResults.module.scss";
 
-import cached_data from "../../assets/testData3.json";
+import cached_data from "../../assets/testData3.json"
+import GameItem from "../GameItem/index.jsx";
+import styles from "../Home/Home.module.scss";
 
 function SearchResults() {
+
+    useEffect(() => {
+        setData(cached_data.games)
+    }, []);
+
+
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const location = useLocation();
-    const query = location.state?.query || '';
-    useEffect(() => {
-        setData(cached_data.games);
-        setLoading(false);
-    }, []);
+    const { state } = useLocation();
+    const query = state?.query || '';
+    const regex = new RegExp(`^${query}`, 'i');
+    const results = data.filter(game => regex.test(game.title));
+
 
     const regex = new RegExp(query, 'i');
     const results = data.filter(game => regex.test(game.title));
 
     return (
-        <div className={styles.container}>
-            <SearchBar onSearch={(newQuery) => {
-                const regex = new RegExp(newQuery, 'i');
-                const newResults = data.filter(game => regex.test(game.title));
-                setData(newResults);
-            }} />
-            <h2>Results for "{query}"</h2>
-            {loading ? (
-                <p>Loading results...</p>
-            ) : results.length > 0 ? (
-                <div className={styles.main_container__top_gallery}>
-                    <div className={styles.main_container__top_gallery__items}>
-                        {results.map((game, index) => (
-                            <GameItem key={index} item={game} />
-                        ))}
-                    </div>
+        <div>
+
+            <div>
+                <h2>Results for {query}</h2>
+                {/*PLEASE UPDATE THIS className; i just used this name to get it align */}
+                <div className={styles.main_container__top_gallery__items}>
+
+                {results.length > 0 ? (
+                        results.map((item, index) => (
+                            // <li key={index}>{game.title}</li>
+                             <GameItem item = {item}/>
+                        ))
+
+                ) : (
+                    <p>No games found</p>
+                )}
                 </div>
-            ) : (
-                <p>No games found</p>
-            )}
+
+            </div>
+
+
         </div>
     );
 }
