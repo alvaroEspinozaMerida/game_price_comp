@@ -1,54 +1,37 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import SearchBar from '../SearchBar';
 import GameItem from '../GameItem';
 import styles from "../SearchResults/SearchResults.module.scss";
 
-import cached_data from "../../assets/testData3.json"
-import GameItem from "../GameItem/index.jsx";
-import styles from "../Home/Home.module.scss";
+import cached_data from "../../assets/testData3.json";
 
 function SearchResults() {
-
     useEffect(() => {
-        setData(cached_data.games)
+        setData(cached_data.games);
     }, []);
 
-
     const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
-
     const { state } = useLocation();
     const query = state?.query || '';
-    const regex = new RegExp(`^${query}`, 'i');
+    const regex = new RegExp(query, 'i');
     const results = data.filter(game => regex.test(game.title));
 
-
-    /* const regex = new RegExp(query, 'i');
-    const results = data.filter(game => regex.test(game.title));
- */
     return (
-        <div>
-
-            <div>
-                <h2>Results for {query}</h2>
-                {/*PLEASE UPDATE THIS className; i just used this name to get it align */}
-                <div className={styles.main_container__top_gallery__items}>
-
+        <div className={styles.mainContainer}>
+            <SearchBar />
+            <h2 className="title is-4">Results for {query}</h2>
+            <div className={styles.resultsContainer}>
                 {results.length > 0 ? (
-                        results.map((item, index) => (
-                            // <li key={index}>{game.title}</li>
-                             <GameItem item = {item}/>
-                        ))
-
+                    results.map((item, index) => (
+                        <Link to={`/game/${item.id}`} key={index} className={styles.gameLink}>
+                            <GameItem item={item} />
+                        </Link>
+                    ))
                 ) : (
-                    <p>No games found</p>
+                    <p className="has-text-centered">No games found</p>
                 )}
-                </div>
-
             </div>
-
-
         </div>
     );
 }

@@ -1,0 +1,22 @@
+.mainContainer {
+    background-color: #202225;
+    padding: 100px; // Provides padding around the entire content
+    margin: auto; // Centers the container
+    //max-width: 960px; // Max width for the main content area
+    width: 100%; // Use full width up to the max width
+}
+
+.resultsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // Creates three columns of equal width
+    gap: 20px; // Adjust the spacing between grid items
+    margin-top: 20px;
+}
+
+.gameLink {
+    background-color: #2f3136;
+    margin-bottom: 10px; // Space between game links
+    //width: 100%; // Ensure link utilizes full width for better clickability
+    display: grid; // Make link a block element to fill the width
+
+}

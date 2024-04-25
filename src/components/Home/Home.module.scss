@@ -3,9 +3,8 @@
 .main_container{
   margin: 5%;
   display: grid;
-  grid-template-rows: .25fr  .75fr 1fr 1fr;
+  grid-template-rows: .25fr  .25fr .25fr .25fr;
   //grid-template-columns: 1fr;
-
   color:$bg3;
   justify-content: center;
   align-items: center;
@@ -14,6 +13,7 @@
   &__top_gallery{
 
     width: 70vw;
+
     &__items{
 
 
@@ -23,7 +23,7 @@
       padding: 5%;
       display: grid;
       grid-template-columns: repeat(3, auto); /* Creates 3 columns of equal width */
-      grid-row-gap: 7%;
+      grid-row-gap: 5%;
       grid-column-gap: 5%;
       justify-content: center;
       align-items: center;

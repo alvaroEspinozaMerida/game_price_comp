@@ -10,12 +10,14 @@ $button-bg: #121212;
 
 .searchForm {
   display: flex;
+  align-items: center;
   flex-direction: column;
 }
 
 .searchBox {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 65vw;
   background: none;
 }
