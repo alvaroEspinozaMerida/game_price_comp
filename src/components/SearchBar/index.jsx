@@ -4,7 +4,6 @@ import styles from "./SearchBar.module.scss"
 import cached_data from "../../assets/testData3.json"
 
 import { Link, useNavigate } from 'react-router-dom';
-import testImg2 from "../../assets/half.png";
 
 
 
