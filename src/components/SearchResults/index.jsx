@@ -24,9 +24,9 @@ function SearchResults() {
     const results = data.filter(game => regex.test(game.title));
 
 
-    const regex = new RegExp(query, 'i');
+    /* const regex = new RegExp(query, 'i');
     const results = data.filter(game => regex.test(game.title));
-
+ */
     return (
         <div>
 
