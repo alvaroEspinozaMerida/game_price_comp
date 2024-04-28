@@ -12,6 +12,7 @@ $button-bg: #121212;
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 1rem;
 }
 
 .searchBox {
@@ -25,27 +26,30 @@ $button-bg: #121212;
 .searchInput {
   flex-grow: 1;
   font-size: $large-font;
-  border: 2px solid $bg3;
+  //border: 2px solid $bg3;
   border-radius: .5rem;
   color: white;
-  outline: none;
+  //outline: none;
+  border: none;
   padding: 1.25rem;
-  background-color: $button-bg;
+  background-color: hsl(221, 14%, 9%);
 }
 
 .searchButton {
   padding: 1.25rem;
-  background-color: $button-bg;
+  margin-left: 1rem;
+  background-color: hsl(221, 14%, 9%);
   color: white;
-  border: 2px solid $bg3;
+  //border: 2px solid $bg3;
   border-radius: .5rem;
   cursor: pointer;
 }
 
 .suggestions {
-  background-color: #121212;
+  background-color: hsl(221, 14%, 9%);
   //border: 2px solid $bg3;
   border-radius: .5rem;
+  margin-bottom: 1rem;
 }
 
 .suggestions li {

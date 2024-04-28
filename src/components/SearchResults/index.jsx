@@ -20,7 +20,7 @@ function SearchResults() {
     return (
         <div className={styles.mainContainer}>
             <SearchBar />
-            <h2 className="title is-4">Results for {query}</h2>
+            <h2 className="title is-4">Results for &quot;{query}&quot;</h2>
             <div className={styles.resultsContainer}>
                 {results.length > 0 ? (
                     results.map((item, index) => (

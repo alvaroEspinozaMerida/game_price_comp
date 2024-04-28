@@ -2,25 +2,26 @@
 
 .item_container{
 
-  display: grid;
+  //display: grid;
   //grid-template-rows: 1fr .25fr;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  //border-radius: .5rem;
+  padding-top: .5rem;
+  
 
 
-  &__prices{
+  &__prices {
     display: grid;
+    
     background: $bg;
-    grid-template-columns: auto auto auto;
-    grid-column-gap: 5%;
-
+    grid-template-columns: repeat(4, auto);
     justify-content: center;
     align-items: center;
     justify-items: center;
-
-
+    gap: 5%;
   }
 
-  img{
+  img {
     width: 350px;
     height: 200px;
     object-fit: cover;
