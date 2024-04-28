@@ -7,13 +7,14 @@
   box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
   //border-radius: .5rem;
   padding-top: .5rem;
+  background-color: #2e3136;
   
 
 
   &__prices {
     display: grid;
     
-    background: $bg;
+    background-color: hsl(221, 14%, 9%);
     grid-template-columns: repeat(4, auto);
     justify-content: center;
     align-items: center;

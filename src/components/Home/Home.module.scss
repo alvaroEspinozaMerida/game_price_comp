@@ -1,25 +1,23 @@
 @import "../../styles/variables.scss";
 
-.main_container{
+.main_container {
   margin: 5%;
-  display: grid;
-  grid-template-rows: .25fr  .25fr .25fr .25fr;
-  //grid-template-columns: 1fr;
-  color:$bg3;
-  justify-content: center;
+  background-color: #202225;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-items: center;
 
-  &__top_gallery{
+  .main_container__carousel {
+    margin-bottom: 20px; /* Adjust as needed */
+  }
 
+  .main_container__top_gallery {
     width: 70vw;
 
-    &__items{
-
-
-      background-color: rgba(255, 255, 255, 0.03); /* White with 5% opacity */
+    &__items {
+      background-color: #4a4c51; /* White with 5% opacity */
       border-radius: 20px;
-
       padding: 5%;
       display: grid;
       grid-template-columns: repeat(3, auto); /* Creates 3 columns of equal width */
@@ -28,36 +26,6 @@
       justify-content: center;
       align-items: center;
       justify-items: center;
-
     }
-
   }
-
-  //
-  //@include breakpoint(sm){
-  //  margin-top: 1%;
-  //}
-
-  //&__data_display{
-  //  width: 90vw;
-  //
-  //  //@include breakpoint(sm){
-  //  //  width: 60vw;
-  //  //}
-  //
-  //  &__grid_container{
-  //      display: grid;
-  //      grid-template-columns: repeat(3, 1fr);
-  //      grid-gap: 10px;
-  //      font-size: $xxsmall-font;
-  //      color: $bg3;
-  //      place-items: center;
-  //      @include breakpoint(sm){
-  //        font-size: $small-font;
-  //      }
-  //  }
-  //
-  //}
-
 }
-
