@@ -24,9 +24,7 @@ function SearchResults() {
             <div className={styles.resultsContainer}>
                 {results.length > 0 ? (
                     results.map((item, index) => (
-                        <Link to={`/game/${item.id}`} key={index} className={styles.gameLink}>
                             <GameItem item={item} />
-                        </Link>
                     ))
                 ) : (
                     <p className="has-text-centered">No games found</p>
