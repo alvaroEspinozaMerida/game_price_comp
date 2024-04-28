@@ -6,7 +6,7 @@ import testImg2 from "../../assets/half.png";
 function GameItem(props) {
     return (
         <div className="container">
-            <div className={styles.item_container} style={{ borderRadius: '.5rem' }}>
+            <div className={styles.item_container}>
                 <h2 className="title is-5 has-text-centered">{props.item.title}</h2>
                 <div className="has-text-centered">
                     <Link to={`/game_item/${props.item.steamAppID}`}>

@@ -4,6 +4,8 @@ import testImg2 from "../../assets/halo2.png";
 import testImg from "../../assets/halo.png";
 import testImg3 from "../../assets/halo3.png";
 import testImg4 from "../../assets/halo4.png";
+import SearchBar from '../SearchBar';
+import { Container, Title, Image, Columns, Column, Box } from "react-bulma-components";
 
 import gameTestData from "../../assets/testData3.json";
 
@@ -66,8 +68,9 @@ function GameItemPage(props) {
         return <div>Loading...</div>;
     }
     return (
-        <div className={styles.main_container}>
-            <h1>{item.title}</h1>
+        <div className={"container "+styles.main_container}>
+            <SearchBar />
+            <h1 className="title is-1">{item.title}</h1>
             {/*Image links will need to be added manually in database*/}
             <div className={styles.main_container__images} >
                 <img src={testImg2} alt="Image 2" />
@@ -77,19 +80,6 @@ function GameItemPage(props) {
             </div>
             <div className={styles.main_container__prices} >
                 <div className={styles.main_container__prices__headers}>
-                    <h1>
-                        Date:
-                    </h1>
-
-                    <h1>
-                        Store Name:
-                    </h1>
-                    <h1>
-                        Store Price:
-                    </h1>
-                    <h1>
-                        Store Savings:
-                    </h1>
                 </div>
                 <div className={styles.main_container__prices__history}>
 

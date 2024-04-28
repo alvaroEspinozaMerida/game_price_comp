@@ -2,15 +2,9 @@
 .main_container {
   margin-top: 5%;
   display: grid;
-  //grid-template-rows: .15fr .85fr 1fr;
-
   grid-row-gap: 1%;
-
   color:$bg4;
   width: 100%;
-
-
-
   justify-content: center;
   align-items: center;
   justify-items: center;
@@ -25,65 +19,37 @@
       width: 375px;
       height: 500px;
       object-fit: cover;
-      background-color: rgba(255, 255, 255, 0.05); /* White with 5% opacity */
+      background-color: rgba(255, 255, 255, 0.05);
       box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 
     }
   }
 
   &__prices{
-
     width: 100%;
-
-    background-color: rgba(255, 255, 255, 0.03); /* White with 5% opacity */
-    //border-radius: 20px;
-
-
-    //justify-content: center;
-    //align-items: center;
-    //justify-items: center;
-    //padding: 5%;
-
 
     &__headers{
       display:flex;
       justify-content: center;
       align-items: center;
       flex-direction: row;
-      //color: $bg3;
       grid-column-gap: 5%;
     }
 
     &__history{
       display: grid;
       grid-row-gap: 5%;
-
-
-
-      align-items: center;
       justify-items: center;
 
-      height: 100vh;
-
-      //display:flex;
-      //color: $bg3;
-      //grid-column-gap: 10%;
-
       &__stores{
-        display:flex;
-        //justify-content: center;
+        display: flex;
+        justify-content: space-evenly;
         align-items: center;
-        flex-direction: row;
-
-
-
-        padding: 2%;
-
-        //color: $bg3;
+        padding: 1rem;
         grid-column-gap: 10%;
-        width: 60%;
+        width: 100%;
 
-        background-color: rgba(118, 171, 174, 0.4); /* White with 5% opacity */
+        background-color: rgba(118, 171, 174, 0.4);
         box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
         border-radius: 20px;
 
