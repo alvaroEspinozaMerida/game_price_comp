@@ -73,10 +73,10 @@ function GameItemPage(props) {
             <h1 className="title is-1">{item.title}</h1>
             {/*Image links will need to be added manually in database*/}
             <div className={styles.main_container__images} >
-                <img src={testImg2} alt="Image 2" />
-                <img src={testImg} alt="Image 2" />
-                <img src={testImg3} alt="Image 2" />
-                <img src={testImg4} alt="Image 2" />
+                <img src={item.screenshots[0]} alt="Image 2" />
+                <img src={item.screenshots[1]} alt="Image 2" />
+                <img src={item.screenshots[2]} alt="Image 2" />
+                <img src={item.screenshots[3]} alt="Image 2" />
             </div>
             <div className={styles.main_container__prices} >
                 <div className={styles.main_container__prices__headers}>

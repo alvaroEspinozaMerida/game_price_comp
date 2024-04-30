@@ -10,7 +10,7 @@ function GameItem(props) {
                 <h2 className="title is-5 has-text-centered">{props.item.title}</h2>
                 <div className="has-text-centered">
                     <Link to={`/game_item/${props.item.steamAppID}`}>
-                        <img src={testImg2} alt="Image 2" />
+                        <img src={props.item.thumb} alt="Image 2" />
                     </Link>
                 </div>
                 <div className={styles.item_container__prices}>
