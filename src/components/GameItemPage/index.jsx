@@ -86,7 +86,7 @@ function GameItemPage(props) {
                     {
                         item.deals.map((deal, index) => (
                             <div  className={styles.main_container__prices__history__stores} key={deal.dealID}>
-                                <div>Store ID: {deal.storeID}</div>
+                                <div>Store ID: {deal.storeName}</div>
                                 {/*<div>Date: {deal.date.join('-')}</div>*/}
                                 <div>Price: ${deal.price}</div>
                                 <div>Retail Price: ${deal.retailPrice}</div>
