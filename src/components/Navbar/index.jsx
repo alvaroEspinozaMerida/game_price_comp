@@ -24,15 +24,7 @@ const Navbar = () => {
 
             <div className={`navbar-menu ${menuOpen ? 'is-active' : ''}`}>
                 <div className="navbar-start">
-                    <Link className="navbar-item" to="/about">
-                        Store
-                    </Link>
-                    <Link className="navbar-item" to="/about">
-                        About
-                    </Link>
-                    <Link className="navbar-item" to="/donate">
-                        Support
-                    </Link>
+                   
                 </div>
 
                 <div className="navbar-end">
