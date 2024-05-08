@@ -14,7 +14,7 @@ function GameItem(props) {
                     </Link>
                 </div>
                 <div className={styles.item_container__prices}>
-                    {props.item.deals.map(deal => <h3 key={deal.storeID}>{deal.storeName}: {deal.price}$</h3>)}
+                    {props.item.deals.length > 0 && <h3>{props.item.deals[0].storeID}: {props.item.deals[0].price}$</h3>}
                 </div>
             </div>
         </div>
